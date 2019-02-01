@@ -1,0 +1,11 @@
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@improbable-eng/grpc-web": "^0.8.0",
+    "@types/google-protobuf": "^3.2.5",
+    "google-protobuf": "^3.2.0",
+    "ts-protoc-gen": "^0.9.1-pre.50abb56"
+  }
+}

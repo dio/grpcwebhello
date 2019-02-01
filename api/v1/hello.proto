@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package dio.hellogrpcweb.v1;
+option go_package = "v1";
+
+import "google/api/annotations.proto";
+
+service YAMLService {
+  rpc ToJSON(ToJSONRequest) returns (ToJSONResponse) {
+    option (google.api.http) = {
+      post : "/v1"
+      body : "*"
+    };
+  };
+
+  rpc ToJSONBytes(ToJSONBytesRequest) returns (ToJSONBytesResponse) {
+    option (google.api.http) = {
+      post : "/v1"
+      body : "*"
+    };
+  };
+}
+
+message ToJSONRequest { string yaml = 1; }
+
+message ToJSONResponse { string json = 1; }
+
+message ToJSONBytesRequest { bytes yaml = 1; }
+
+message ToJSONBytesResponse { bytes json = 1; }
